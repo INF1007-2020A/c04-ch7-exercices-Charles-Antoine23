@@ -7,8 +7,8 @@
 # TODO: Importez vos modules ici
 from math import pi
 import sys
-sys.path.insert(1, "C:\Users\Charles-\Documents\Polytechnique\INF1007\c04-ch6-exercices-Charles-Antoine23")
-from exercice2 import frequence
+sys.path.insert(1, r"C:\Users\Charles-\Documents\Polytechnique\INF1007\c04-ch6-exercices-Charles-Antoine23")
+from exercice import frequence
 
 # TODO: Définissez vos fonction ici
 def ellipsoide( x = 1, y = 1, z = 1, masse_volumique = 1):
