@@ -1,28 +1,22 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from turtle import *
+
+def draw_tree():
+    setheading(90)
+    color('green')
+    draw_branch()
+    done()
+
+def draw_branch(branch_len = 70, pen_size = 7, angle = 35):
+    if branch_len > 0:
+        pensize(pen_size)
+        forward(branch_len)
+        right(angle)
+        draw_branch(branch_len - 10, pen_size - 1, angle - 5)
+        left(angle * 2)
+        draw_branch(branch_len - 10, pen_size - 1, angle - 5)
+        right(angle)
+        backward(branch_len)
 
 
 
-
-# TODO: Importez vos modules ici
-from math import pi
-import sys
-sys.path.insert(1, r"C:\Users\Charles-\Documents\Polytechnique\INF1007\c04-ch6-exercices-Charles-Antoine23")
-from exercice import frequence
-
-# TODO: Définissez vos fonction ici
-def ellipsoide( x = 1, y = 1, z = 1, masse_volumique = 1):
-
-    volume = 4 / 3 * pi * x * y * z
-    masse = masse_volumique * volume
-
-    return volume, masse
-
-
-if __name__ == '__main__':
-    # TODO: Appelez vos fonctions ici
-
-    print(ellipsoide())
-    print(lambda sentence: sorted(frequence(sentence), key=frequence(sentence).__getitem__)[1])("Ceci est une phrase")
-
-    pass
+draw_tree()
